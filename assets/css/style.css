@@ -1,0 +1,72 @@
+/*--Global style--*/
+
+body {
+    background-color: black;
+    font-family: "roboto", sans-serif;
+    letter-spacing: 1.5px;
+    color: whitesmoke;
+    text-align: center;
+}
+
+/*--Heading--*/
+.title-heading {
+    font-family: Shadows Into Light, sans-serif;
+    color: whitesmoke;
+    text-align: center;
+    font-size: 380%;
+    letter-spacing: 3px;
+    padding-top: 1%;
+}
+
+/*--Game area container--*/
+.game-area {
+    background-color: whitesmoke;
+    text-align: center;
+    box-sizing: border-box;
+    width: 65%;
+    height: 30rem;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    padding: 1%;
+    border-radius: 90px;
+}
+
+/*--Question area container--*/
+.lyrics-box {
+    width: 75%;
+    font-size: 1.8rem;
+    background-color: black;
+    border-radius: 10px;
+    text-align: center;
+    margin-left:auto;
+    margin-right: auto;
+    margin-top: 5%;
+  }
+
+
+/*--Missing lyrics/answers container--*/
+
+#missing-lyric {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+
+ button {
+    margin: 5px;
+    width: 10%;
+    border-radius: 10px;
+    border: 1px solid black;
+    padding-bottom: 10px;
+    background-color: whitesmoke;
+    font-size: 20px;
+    font-weight: 600;
+    font-style: bold;
+  }
+
+
+
+
