@@ -5,19 +5,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="quiz on song lyrics">
+    <meta name="keywords" content="quiz, song, music, lyrics, finish">
     <link rel="stylesheet" href="assets/css/style.css"
 </head>
 <body>
 <!--title heading-->
     <h1 class="title-heading">Finish the Lyrics</h1>
 
-<!--main game area-->
+<!--main area where the quiz is held-->
 <div class ="game-area"
   <div class="lyrics-box">
+      <div id="lyrics">
+          <br>
+      </div>
   </div>
 </div>
 
-<!--options area-->
+<!--missing lyric options/answers-->
+<div id="missing-lyric" class="btn-grid">
+    <button class="btn correct"></button> <br>
+    <button class="btn wrong"></button> <br>
+    <button class="btn wrong"></button> 
+</div>
 
     
     <script  src="assets/js/script.js"></script>
