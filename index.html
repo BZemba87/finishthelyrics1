@@ -5,15 +5,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="quiz on song lyrics">
+    <meta name="description" content="Finish the Lyrics, quiz on song lyrics">
     <meta name="keywords" content="quiz, song, music, lyrics, finish">
-    <link rel="stylesheet" href="assets/css/style.css"
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 <!--title heading-->
     <h1 class="title-heading">Finish the Lyrics</h1>
 
-<!--main area where the quiz is held-->
+<!--game area container-->
 <div class ="game-area"
   <div class="lyrics-box">
       <div id="lyrics">
@@ -22,13 +25,23 @@
   </div>
 </div>
 
-<!--missing lyric options/answers-->
+<!--answer buttons-->
 <div id="missing-lyric" class="btn-grid">
     <button class="btn correct"></button> <br>
     <button class="btn wrong"></button> <br>
     <button class="btn wrong"></button> 
 </div>
 
+<!--navigation  button-->
+<div class="next">
+    <button class="next-btn" id="next-btn"></button>
+</div>
+
+<!--score area-->
+<div class="score-area">
+    <p class="scores">Wins <span id="score">0</span></p>
+    <p class="scores">Losses <span id="losses">0</span></p>
+</div>
     
     <script  src="assets/js/script.js"></script>
 </body>
