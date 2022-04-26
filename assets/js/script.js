@@ -36,7 +36,7 @@ const myLyrics = [
     missingLyrics: {
         a: "WHO YOU TRUST",
         b: "WHO YOU LOVE",
-        c: "WHO YOU TRUST",
+        c: "WHO YOU HATE",
     },
     correctAnswer: "b"
 },
