@@ -18,44 +18,12 @@ body {
     padding-top: 1%;
 }
 
-/*--Game area container--*/
-.game-area {
-    background-color: whitesmoke;
-    text-align: center;
-    box-sizing: border-box;
-    width: 65%;
-    height: 30rem;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-    padding: 1%;
-    border-radius: 90px;
-}
+/*--quiz container--*/
+
 
 /*--Question area container--*/
-.lyrics-box {
-    width: 75%;
-    font-size: 1.8rem;
-    background-color: black;
-    border-radius: 10px;
-    text-align: center;
-    margin-left:auto;
-    margin-right: auto;
-    margin-top: 5%;
-  }
 
-
-/*--Missing lyrics/answers container--*/
-
-#missing-lyric {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-  }
-
-
- button {
+  #submit {
     margin: 5px;
     width: 10%;
     border-radius: 10px;

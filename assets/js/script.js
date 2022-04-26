@@ -1,18 +1,56 @@
+//variables
 const quizContainer = document.getElementById('quiz');
-const scoresContainer = docment.getElementById('scores');
+const scoresContainer = document.getElementById('scores');
 const submitButton = document.getElementById('submit');
 
-function runQuiz(){}
+function runQuiz( ) {
+    // variable to store HTML output
+    const output = [ ] ;
+    
+    // for loop lyrics
+    for (i = 0; i < myLyrics.length; i++) {
+        console.log(myLyrics[i]);
+      } 
 
-function showScores(){}
+    //variable to store the missing lyrics
+            const missingLyrics = [];
+
+     // for each available answer 
+            for (letter in currentLyrics.missingLyrics) {
+
+     //add an HTML radio button
+                missingLyrics.push(
+                    `<label>
+                    <input type="radio" name="lyrics${lyricsNumber}" value="${letter}">
+                    ${letter} :
+                    ${currentLyrics.missingLyrics[letter]}
+                    </label>`
+                );
+            }
+    //add this questions and its answers to the output
+            output.push(
+                `<div class="lyrics"> ${currentQuestion.question} </div>
+                <div class="missingLyrics"> ${missingLyrics.join('')} </div>`
+            );
+        }   
+    );
+    
+    //combines output list into one string of html 
+      quizContainer.innerHTML = output.join('');
+        }
+    
+function showScores( ){ }
 
 // run quiz and show lyrics
 runQuiz();
 
-submitButton.addEventListener('click', showScores);
+// gather missing lyrics from the quiz
+const missingLyricsContainers = quizContainer.querySelectorAll('.missingLyrics');
+
+let numCorrect = 0; 
 
 // lyrics and missing lyrics
-const myLyrics = [
+let myLyrics = [
     {
     lyrics:  "Go easy on me, baby, I was still a  ____",
     missingLyrics: {
@@ -68,3 +106,4 @@ const myLyrics = [
         correctAnswer: "a",
     }
 ] ;
+submitButton.addEventListener('click', showScores);
