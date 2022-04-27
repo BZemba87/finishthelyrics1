@@ -1,68 +1,33 @@
-//variables
-const quizContainer = document.getElementById('quiz');
-const scoresContainer = document.getElementById('scores');
-const submitButton = document.getElementById('submit');
+const startButton = document.getElementById("start-btn")
+const quizContainer = document.getElementById("quiz-container")
 
-function runQuiz( ) {
-    // variable to store HTML output
-    const output = [ ] ;
-    
-    // for loop lyrics
-    for (i = 0; i < myLyrics.length; i++) {
-        console.log(myLyrics[i]);
-      } 
+startButton.addEventListener('click', startQuiz)
 
-    //variable to store the missing lyrics
-            const missingLyrics = [];
+function startQuiz() {
+console.log('started')
+startButton.classList.add('hide')
+questionContainerElement.classList.remove('hide')
+setNextQuestion();
+}
 
-     // for each available answer 
-            for (letter in currentLyrics.missingLyrics) {
+function setNextQuestion() {
+}
 
-     //add an HTML radio button
-                missingLyrics.push(
-                    `<label>
-                    <input type="radio" name="lyrics${lyricsNumber}" value="${letter}">
-                    ${letter} :
-                    ${currentLyrics.missingLyrics[letter]}
-                    </label>`
-                );
-            }
-    //add this questions and its answers to the output
-            output.push(
-                `<div class="lyrics"> ${currentQuestion.question} </div>
-                <div class="missingLyrics"> ${missingLyrics.join('')} </div>`
-            );
-        }   
-    );
-    
-    //combines output list into one string of html 
-      quizContainer.innerHTML = output.join('');
-        }
-    
-function showScores( ){ }
+function selectAnswer() {
+}
 
-// run quiz and show lyrics
-runQuiz();
-
-// gather missing lyrics from the quiz
-const missingLyricsContainers = quizContainer.querySelectorAll('.missingLyrics');
-
-let numCorrect = 0; 
-
-// lyrics and missing lyrics
-let myLyrics = [
-    {
+const questions = [
+   {
     lyrics:  "Go easy on me, baby, I was still a  ____",
-    missingLyrics: {
-        a: "CHILD",
-        b: "BABY",
-        c: "GIRL",
-    },
+    answers: [
+        {text: 'CHILD',  correct: true}
+        {text: 'BABY', correct: false}
+    ]
     correctAnswer: "a"
 } ,
 {
     lyrics: "And you know me, turn the O-2 into ____",
-    missingLyrics: {
+    options: {
         a: "A SQUARE",
         b: "FIRE",
         c: "THE O-3",
@@ -71,7 +36,7 @@ let myLyrics = [
 },
 {
     lyrics: "And mother always told me, be careful of ____",
-    missingLyrics: {
+    options: {
         a: "WHO YOU TRUST",
         b: "WHO YOU LOVE",
         c: "WHO YOU HATE",
@@ -80,7 +45,7 @@ let myLyrics = [
 },
 {
     lyrics: "I took a sip from my ____ cup",
-    missingLyrics: {
+    options: {
         a: "TEA",
         b: "DEVIL'S",
         c: "COFFEE",
@@ -89,7 +54,7 @@ let myLyrics = [
     },
     {
         lyrics: "She's got a ____ that it seems to me",
-        missingLyrics: {
+        options: {
             a: "LOOK",
             b: "FACE",
             c: "SMILE",
@@ -98,7 +63,7 @@ let myLyrics = [
     },
     {
         lyrics: "It may be quite ___ , but now that it's done",
-        missingLyrics: {
+        options: {
             a: "SIMPLE",
             b: "DIFFICULT",
             c: "STUPID",
@@ -106,4 +71,3 @@ let myLyrics = [
         correctAnswer: "a",
     }
 ] ;
-submitButton.addEventListener('click', showScores);

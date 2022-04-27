@@ -18,16 +18,21 @@
     <h1 class="title-heading">Finish the Lyrics</h1>
 
 <!--quiz container-->
-<div id="quiz">
-</div>
-
-<!--submit button-->
-<button id="submit">Submit</button>
-
-<!--score area-->
-<div id="scores">
+<div class="quiz-container">
+    <div id="lyrics-container" class="hide"></div>
+    <div id="lyrics">Lyrics</div>
+    <div id="answer-buttons" class="btn-grid">
+        <button class="btn">Answer 1</button> <br>
+        <button class="btn">Answer 2</button><br>
+        <button class="btn">Answer 3</button><br>
+        <button class="btn">Answer 4</button><br>
+        </div>
+    <div class="controls">
+        <button id="start-btn" class="start-btn btn">Start</button>
+        <button id ="next-btn" class="next-btn btn hide">Next</button>
+    </div>
 </div>
     
-    <script  src="assets/js/script.js"></script>
+<script  src="assets/js/script.js"></script>
 </body>
 </html>

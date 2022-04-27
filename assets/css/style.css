@@ -1,39 +1,62 @@
-/*--Global style--*/
+*,*::before, ::after {
+box-sizing: border-box;
+  font-family:  Shadows Into Light, sans-serif;
+}
 
 body {
     background-color: black;
-    font-family: "roboto", sans-serif;
-    letter-spacing: 1.5px;
-    color: whitesmoke;
-    text-align: center;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
 }
 
-/*--Heading--*/
-.title-heading {
-    font-family: Shadows Into Light, sans-serif;
-    color: whitesmoke;
-    text-align: center;
-    font-size: 380%;
-    letter-spacing: 3px;
-    padding-top: 1%;
+/*--quiz lyrics and answers/missing lyrics--*/
+.quiz-container {
+  width: 800px;
+  max-width: 80%;
+  background-color: whitesmoke;
+  border-radius: 5px;
+  padding: 10px;
 }
 
-/*--quiz container--*/
+.btn-grid {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 10px;
+  margin: 20px 0;
+}
 
+.btn {
+  background-color: whitesmoke;
+  border: 1px solid black(30%);
+  border-radius: 10px;
+  padding: 5px 10px;
+  font-size: 100%;
+  align-items: center;
+}
 
-/*--Question area container--*/
+.hide{
+  display: none;
+}
 
-  #submit {
-    margin: 5px;
-    width: 10%;
-    border-radius: 10px;
-    border: 1px solid black;
-    padding-bottom: 10px;
-    background-color: whitesmoke;
-    font-size: 20px;
-    font-weight: 600;
-    font-style: bold;
-  }
+.start-btn, .next-btn {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 10px 20px;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+   
+  
 
 
 
