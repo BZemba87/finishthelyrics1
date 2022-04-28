@@ -7,6 +7,9 @@ const answerButtonsElement = document.getElementById('answer-buttons')
 let shuffledQuestions, currentQuestionIndex
 
 startButton.addEventListener('click', startQuiz)
+nextButton.addEventListener('click', () => { currentQuestionIndex++
+      setNextQuestion()
+})
 
 function startQuiz() {
 startButton.classList.add('hide')
@@ -38,19 +41,28 @@ function showQuestion(question) {
 function resetState() {
     nextButton.classList.add('hide')
     while (answerButtonsElement.firstChild) {
-        answerButtonsElement.removeChild
-        (answerButtonsElement.firstChild)
+        answerButtonsElement.removeChild(answerButtonsElement.firstChild)
     }
 }
 
 function selectAnswer(e) {
     const selectedButton = e.target
     const correct = selectedButton.dataset.correct
+    setStatusClass(document.body, correct)
+    Array.from(answerButtonsElement.children).forEach(button => {
+        setStatusClass(button, button.dataset.correct)
+    })
+    if (shuffledQuestions.length > currentQuestionIndex + 1) {
+        nextButton.classList.remove('hide')
+    } else {
+        startButton.innerText = 'Restart'
+        startButton.classList.remove('hide')
+    }
 }
 
 const questions = [
    {
-    question:  "Go easy on me, baby, I was still a ....",
+    question:  "Go easy on me, baby, I was still a ...",
     answers: [
         {text: 'CHILD',  correct: true},
         {text: 'BABY', correct: false},
@@ -58,4 +70,13 @@ const questions = [
         {text: 'MAN', correct: false},
     ] 
    },
+   {
+   question: "And you know me, turn the O-2 into ...",
+    answers: [
+        {text: "A SQUARE", correct: false},
+        {text: "FIRE", corect: false},
+        {text: "THE O-3",correct: true},
+        {text: "APARTMENTS", correct: false}
+    ]
+    },
 ]
