@@ -13,7 +13,7 @@ startButton.classList.add('hide')
 shuffledQuestions = questions.sort(() => Math.random( ) - .5 )
 currentQuestionIndex = 0
 questionContainerElement.classList.remove('hide')
-setNextQuestion();
+setNextQuestion()
 }
 
 function setNextQuestion() {
@@ -53,7 +53,9 @@ const questions = [
     question:  "Go easy on me, baby, I was still a ....",
     answers: [
         {text: 'CHILD',  correct: true},
-        {text: 'BABY', correct: false}
+        {text: 'BABY', correct: false},
+        {text: 'GIRL', correct: false},
+        {text: 'MAN', correct: false},
     ] 
    },
 ]
