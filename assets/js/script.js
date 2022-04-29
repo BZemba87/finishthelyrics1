@@ -5,23 +5,23 @@ const questionElement = document.getElementById('questions')
 const answerButtonsElement = document.getElementById('answer-buttons')
 
 let shuffledQuestions, currentQuestionIndex
-let setStatusClass
 
 startButton.addEventListener('click', startQuiz)
-nextButton.addEventListener('click', () => { currentQuestionIndex++
-      setNextQuestion()
-})
+nextButton.addEventListener('click', () => {
+    currentQuestionIndex++
+    setNextQuestion()
+  })
+  
 
 function startQuiz() {
 startButton.classList.add('hide')
+questionContainerElement.classList.remove('hide')
 shuffledQuestions = questions.sort(() => Math.random( ) - .5 )
 currentQuestionIndex = 0
-questionContainerElement.classList.remove('hide')
 setNextQuestion()
 }
 
 function setNextQuestion() {
-    resetState()
     showQuestion(shuffledQuestions[currentQuestionIndex])
 }
 
@@ -40,28 +40,31 @@ function showQuestion(question) {
 }
 
 function resetState() {
-    nextButton.classList.add('hide')
     while (answerButtonsElement.firstChild) {
-        answerButtonsElement.removeChild(answerButtonsElement.firstChild)
+      answerButtonsElement.removeChild(answerButtonsElement.firstChild)
     }
-}
+    clearStatusClass(document.body)
+    nextButton.classList.add('hide')
+  }
 
-function selectAnswer(e) {
+function selectAnswer() {  
     const selectedButton = e.target
     const correct = selectedButton.dataset.correct
     setStatusClass(document.body, correct)
     Array.from(answerButtonsElement.children).forEach(button => {
-        setStatusClass(button, button.dataset.correct)
+      setStatusClass(button, button.dataset.correct)
+      nextButton.classList.remove('hide')
     })
     if (shuffledQuestions.length > currentQuestionIndex + 1) {
         nextButton.classList.remove('hide')
-    } else {
+      } else {
         startButton.innerText = 'Restart'
         startButton.classList.remove('hide')
-    }
-}
+      }
+    
+  }
 
-function setStatusClass(element, correct) {
+  function setStatusClass(element, correct) {
     clearStatusClass(element)
     if (correct) {
       element.classList.add('correct')
@@ -74,7 +77,7 @@ function setStatusClass(element, correct) {
     element.classList.remove('correct')
     element.classList.remove('wrong')
   }
-
+  
 const questions = [
    {
     question:  "Go easy on me, baby, I was still a ...",
