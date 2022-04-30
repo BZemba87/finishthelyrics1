@@ -1,7 +1,7 @@
 //* lyric questions and answers
 let lyrics = {
   question: 'Go easy on me, baby, I was still a ....',
-  alternatives: ['child', 'girl', 'man', 'woman'],
+  alternatives: ['CHILD', 'GIRL', 'MAN', 'WOMAN'],
   correctAnswer: 0
 };
 
@@ -21,10 +21,10 @@ function showLyrics(l) {
   element.addEventListener('click', function(){
     // check correct answer
 if(l.correctAnswer == index) {
-    console.log('Correct Answer!')
+    alert('Yas Queen!');
 }
 else {
-    console.log('Wrong Answer!')
+    alert('Oh No!');
 }
 });
  })
