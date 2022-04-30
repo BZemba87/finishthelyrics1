@@ -8,8 +8,8 @@ body {
 
 /* heading*/
 .heading {
-    padding-top: 4rem;
-    padding-bottom: 1.5rem;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
 }
 
 /* question/lyrics */
@@ -38,9 +38,33 @@ body {
 #btn {
     border-radius: 80%;
     border: 1px solid black;
-    font-size: 100%;
+    font-size: 90%;
     font-family: Shadows Into Light, sans-serif;
     background-color: #E29CD2;
     color: black;
     font-weight: bolder;
+}
+
+.score-area {
+    width: 100%;
+}
+
+.scores {
+    margin: 10rem auto;
+    display: inline-block;
+    padding: 5px;
+    font-size: 50%;
+    font-family: sans-serif;
+}
+
+#score {
+    color: #E29CD2;
+    font-size: 250%;
+    font-family: Shadows Into Light, sans-serif;
+}
+
+#incorrect {
+    color: #E29CD2;
+    font-size: 250%;
+    font-family: Shadows Into Light, sans-serif;
 }

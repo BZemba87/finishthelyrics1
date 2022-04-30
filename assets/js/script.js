@@ -5,6 +5,7 @@ let lyrics = {
   correctAnswer: 0
 };
 
+
 //*funtion to show the lyric questions, alternatives and correct answer
 function showLyrics(l) {
    //* selecting DOM element
@@ -35,7 +36,6 @@ showLyrics(lyrics)
 
 let btn = document.getElementById('btn');
 btn.addEventListener('click', function(){
-  console.log('Clicked!')
 })
 
 function incrementScore() {
@@ -43,6 +43,6 @@ function incrementScore() {
 }
 
 function incrementWrongAnswer() {
-  
+
 }
 
