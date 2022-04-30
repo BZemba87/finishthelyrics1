@@ -34,6 +34,10 @@ body {
     background-color: lightskyblue;
 }
 
+.active {
+    background-color: lightskyblue;
+}
+
 /*next button*/
 #btn {
     border-radius: 80%;
@@ -43,6 +47,10 @@ body {
     background-color: #E29CD2;
     color: black;
     font-weight: bolder;
+}
+
+#btn:hover {
+    color: rgb(7, 176, 243);
 }
 
 .score-area {
