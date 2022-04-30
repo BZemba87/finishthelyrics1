@@ -12,14 +12,14 @@ body {
     padding-bottom: 1.5rem;
 }
 
-/* quiz area layout */
-
+/* question/lyrics */
 #question {
     background-color: black;
     padding-bottom:  1rem;
     font-size: 100%;
 }
 
+/*missing lyrics answers*/
 .alternative {
     border-radius: 25px;
     border: 1px solid black;
@@ -28,11 +28,13 @@ body {
     font-size: x-large;
 }
 
+/*activated when user hovers over answers*/
 .alternative:active,
 .alternative:hover {
     background-color: lightskyblue;
 }
 
+/*next button*/
 #btn {
     border-radius: 80%;
     border: 1px solid black;

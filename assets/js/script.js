@@ -29,11 +29,20 @@ else {
 });
  })
 }
-
+/*runs showLyrics function*/
 showLyrics(lyrics)
+
 
 let btn = document.getElementById('btn');
 btn.addEventListener('click', function(){
   console.log('Clicked!')
 })
+
+function incrementScore() {
+
+}
+
+function incrementWrongAnswer() {
+  
+}
 
