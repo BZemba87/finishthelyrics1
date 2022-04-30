@@ -1,100 +1,16 @@
-const startButton = document.getElementById('start-btn')
-const nextButton = document.getElementById('next-btn')
-const questionContainerElement = document.getElementById('question-container')
-const questionElement = document.getElementById('questions')
-const answerButtonsElement = document.getElementById('answer-buttons')
+//* lyric questions and answers
+let lyrics = {
+  question: 'Go easy on me, baby, I was still a ....',
+  alternatives: ['child', 'girl', 'man', 'woman'],
+  correctAnswer: 0
+};
 
-let shuffledQuestions, currentQuestionIndex
-
-startButton.addEventListener('click', startQuiz)
-nextButton.addEventListener('click', () => {
-    currentQuestionIndex++
-    setNextQuestion()
-  })
-  
-
-function startQuiz() {
-startButton.classList.add('hide')
-questionContainerElement.classList.remove('hide')
-shuffledQuestions = questions.sort(() => Math.random( ) - .5 )
-currentQuestionIndex = 0
-setNextQuestion()
+function showLyrics(l) {
+  //* selecting DOM element
+  let questionDiv = document.getElementById("question");
+  //* display the lyric question
+  questionDiv.textContent = l.question;
 }
 
-function setNextQuestion() {
-    showQuestion(shuffledQuestions[currentQuestionIndex])
-}
 
-    function showQuestion(question) {
-      questionContainerElement.innerText = question.question;
-      question.answers.forEach(answer => {
-        const button = document.createElement('button');
-        button.innerText = answer.text;
-        button.classList.add('btn');
-        if (answer.correct) {
-          button.dataset.correct = answer.correct;
-        }
-        button.addEventListener('click', selectAnswer);
-        answerButtonsElement.appendChild(button);
-      })
-}
 
-function resetState() {
-    while (answerButtonsElement.firstChild) {
-      answerButtonsElement.removeChild(answerButtonsElement.firstChild)
-    }
-    clearStatusClass(document.body)
-    nextButton.classList.add('hide')
-  }
-
-function selectAnswer() {  
-    const selectedButton = e.target
-    const correct = selectedButton.dataset.correct
-    setStatusClass(document.body, correct)
-    Array.from(answerButtonsElement.children).forEach(button => {
-      setStatusClass(button, button.dataset.correct)
-      nextButton.classList.remove('hide')
-    })
-    if (shuffledQuestions.length > currentQuestionIndex + 1) {
-        nextButton.classList.remove('hide')
-      } else {
-        startButton.innerText = 'Restart'
-        startButton.classList.remove('hide')
-      }
-    
-  }
-
-  function setStatusClass(element, correct) {
-    clearStatusClass(element)
-    if (correct) {
-      element.classList.add('correct')
-    } else {
-      element.classList.add('wrong')
-    }
-  }
-
-  function clearStatusClass(element) {
-    element.classList.remove('correct')
-    element.classList.remove('wrong')
-  }
-  
-const questions = [
-   {
-    question:  "Go easy on me, baby, I was still a ...",
-    answers: [
-        {text: 'CHILD',  correct: true},
-        {text: 'BABY', correct: false},
-        {text: 'GIRL', correct: false},
-        {text: 'MAN', correct: false},
-    ] 
-   },
-   {
-   question: "And you know me, turn the O-2 into ...",
-    answers: [
-        {text: "A SQUARE", correct: false},
-        {text: "FIRE", corect: false},
-        {text: "THE O-3",correct: true},
-        {text: "APARTMENTS", correct: false}
-    ]
-    },
-]
