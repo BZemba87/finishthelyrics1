@@ -6,11 +6,18 @@ let lyrics = {
 };
 
 function showLyrics(l) {
-  //* selecting DOM element
-  let questionDiv = document.getElementById("question");
-  //* display the lyric question
-  questionDiv.textContent = l.question;
+   //* selecting DOM element
+   let questionDiv = document.getElementById("question");
+   //* display the lyric question
+   questionDiv.textContent = l.question;
+  //*selecting alternatives by a query
+  let alts = document.querySelectorAll('.alternative');
+
+  alts.forEach(function(element, index) {
+  element.textContent = l.alternatives[index];
+});
 }
 
+showLyrics(lyrics)
 
 
