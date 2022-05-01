@@ -18,3 +18,7 @@ This is a fun musical lyric quiz where the user tests their knowledge on song ly
 ### Returning Visitor Goals
 
 1. As a returning visitor, I want to play again to improve my score.
+
+### Wireframes
+
+- [Quiz Intro](https://github.com/BZemba87/finish-the-lyrics/blob/main/Wireframe%20Quiz%20Intro%20.png)
