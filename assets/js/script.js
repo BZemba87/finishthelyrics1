@@ -42,15 +42,15 @@ else {
     incrementWrongAnswer();
 }
 });
- })
+ });
 }
 /*runs showLyrics function*/
-showLyrics(lyrics)
+showLyrics(lyrics);
 
 /*listen for user clicks on next button*/
 let btn = document.getElementById('btn');
 btn.addEventListener('click', function(){
-})
+});
 
 /*gets current score and increments it by 1*/
 function incrementScore() {
@@ -63,4 +63,3 @@ function incrementWrongAnswer(){
   let oldScore = parseInt(document.getElementById("incorrect").innerText);
   document.getElementById("incorrect").innerText = ++oldScore;
 }
-
