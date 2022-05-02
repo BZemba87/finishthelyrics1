@@ -49,8 +49,7 @@ showLyrics(lyrics);
 
 /*listen for user clicks on next button*/
 let btn = document.getElementById('btn');
-btn.addEventListener('click', function(){
-});
+btn.addEventListener('click', showLyrics());
 
 /*gets current score and increments it by 1*/
 function incrementScore() {

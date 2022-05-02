@@ -13,7 +13,7 @@ This is a fun musical lyric quiz where the user tests their knowledge on song ly
 1. As a first time user, I want to create a username to play a quiz and immediately understand the aim of the game.
 2. As a first time user, I want to know if my answer is right or wrong as soon as I select my choice.  
 3.  As a first time user, I want to see a tally of right or wrong answers as I am playing.
-4.  As a first time user, I want to see my overall result at the end of the game.
+4.  As a first time user, I want to see my overall result at the end of the game and restart.
 
 ### Returning Visitor Goals
 
